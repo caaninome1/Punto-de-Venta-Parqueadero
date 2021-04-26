@@ -1,0 +1,6 @@
+SELECT
+     c.TIPO_VEHICULO,sum(case when c.TIPO_VEHICULO = 'Automovil' OR c.TIPO_VEHICULO = 'Motocicleta' OR c.TIPO_VEHICULO = 'Bicicleta' then 1 else 0 end)AS CANTIDAD
+FROM
+     "ADMINISTRADOR"."CLIENTES" c
+GROUP BY 
+TIPO_VEHICULO
